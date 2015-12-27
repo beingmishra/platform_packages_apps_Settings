@@ -30,4 +30,9 @@
     <string name="selinux_status_permissive">Permissive</string>
     <string name="selinux_status_enforcing">Enforcing</string>
 
+    <!-- Buttons -->
+    <string name="buttons_pref_title">Buttons</string>
+    <string name="buttons_pref_summary">Customize device buttons</string>
+    <string name="enable_navigation_bar_title">On-screen navigation bar</string>
+    <string name="enable_navigation_bar_summary">Enable on-screen navigation bar</string>
 </resources>

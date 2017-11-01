@@ -146,6 +146,14 @@
             android:fragment="com.android.settings.fred.HardwareKeys" />
     </PreferenceCategory >
 
+    <PreferenceCategory
+        android:title="@string/misc_category_title">
+         <Preference
+            android:key="recents"
+            android:fragment="com.android.settings.fred.StockRecentCategory"
+            android:title="@string/aosp_recents_title" />
+    </PreferenceCategory >
+
     <Preference
         android:key="vr_display_pref"
         android:title="@string/display_vr_pref_title"

@@ -44,4 +44,10 @@
         android:max="9"
         settings:min="1"
         settings:units="" />
+
+    <com.android.settings.fred.preferences.SystemSettingSwitchPreference
+	android:key="qs_tile_title_visibility" 
+        android:title="@string/qs_tile_title_visibility_title" 
+        android:summary="@string/qs_tile_title_visibility_summary" 
+        android:defaultValue="true" /> 
 </PreferenceScreen>

@@ -33,6 +33,7 @@ import com.android.settings.display.NightDisplayPreferenceController;
 import com.android.settings.display.NightModePreferenceController;
 import com.android.settings.display.ScreenSaverPreferenceController;
 import com.android.settings.display.ShowOperatorNamePreferenceController;
+import com.android.settings.display.SystemThemePreferenceController;
 import com.android.settings.display.TapToWakePreferenceController;
 import com.android.settings.display.SystemUiThemePreferenceController;
 import com.android.settings.display.ThemePreferenceController;
@@ -99,6 +100,7 @@ public class DisplaySettings extends DashboardFragment {
         controllers.add(new TimeoutPreferenceController(context, KEY_SCREEN_TIMEOUT));
         controllers.add(new VrDisplayPreferenceController(context));
         controllers.add(new ShowOperatorNamePreferenceController(context));
+        controllers.add(new SystemThemePreferenceController(context));
         controllers.add(new WallpaperPreferenceController(context));
         controllers.add(new SystemUiThemePreferenceController(context, lifecycle));
         controllers.add(new ThemePreferenceController(context));

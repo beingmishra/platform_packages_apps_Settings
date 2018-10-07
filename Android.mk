@@ -19,6 +19,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_USE_AAPT2 := true
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
+LOCAL_SRC_FILES += $(call all-java-files-under, ../SmartNavSettings/src)
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-slices-builders \
@@ -32,6 +33,11 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v7-preference \
     android-support-v7-recyclerview \
     android-support-v14-preference \
+
+LOCAL_FULL_LIBS_MANIFEST_FILES += $(LOCAL_PATH)/AndroidManifest-SmartNav.xml
+
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
+    packages/apps/SmartNavSettings/res
 
 LOCAL_JAVA_LIBRARIES := \
     bouncycastle \

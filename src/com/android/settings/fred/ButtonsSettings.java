@@ -66,7 +66,7 @@ public class ButtonsSettings extends ActionFragment
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.settings_buttons);
+        addPreferencesFromResource(R.xml.buttons);
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getContentResolver();

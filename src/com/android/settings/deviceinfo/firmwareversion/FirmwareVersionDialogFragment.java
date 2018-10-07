@@ -91,5 +91,6 @@ public class FirmwareVersionDialogFragment extends InstrumentedDialogFragment {
         new BuildNumberDialogController(this).initialize();
 	new FredVersionDialogController(this).initialize();
 	new CAFVersionDialogController(this).initialize();
+        new SELinuxStatusDialogController(this).initialize();
     }
 }

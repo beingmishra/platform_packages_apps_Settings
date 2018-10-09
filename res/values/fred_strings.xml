@@ -76,4 +76,8 @@
     <string name="theme_accent_picker_default">Default</string>
     <string name="accent_picker_material_colors">Material palette</string>
     <string name="accent_picker_custom_colors">User requested</string>
+
+    <!-- Navigation -->
+    <string name="navigation_category">Navigation</string>
+    <string name="navigationbar_settings_title">Navigation bar</string>
 </resources>

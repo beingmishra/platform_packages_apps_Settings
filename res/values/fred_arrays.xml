@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Copyright (C) 2018 FredProject
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- PIE -->
+    <string-array name="pie_theme_mode_entries">
+        <item>@string/pie_auto</item>
+        <item>@string/pie_white</item>
+        <item>@string/pie_dark</item>
+    </string-array>
+    <string-array name="pie_theme_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pie_battery_mode_entries">
+        <item>@string/pie_battery_text</item>
+        <item>@string/pie_battery_circle</item>
+        <item>@string/pie_battery_both</item>
+    </string-array>
+    <string-array name="pie_battery_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pie_status_mode_entries">
+        <item>@string/pie_status_none</item>
+        <item>@string/pie_status_wifi</item>
+        <item>@string/pie_status_mobile</item>
+        <item>@string/pie_status_both</item>
+    </string-array>
+    <string-array name="pie_status_mode_values">
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="entries_pa_pie_gravity">
+        <item>@string/pa_pie_gravity_left</item>
+        <item>@string/pa_pie_gravity_right</item>
+        <item>@string/pa_pie_gravity_bottom</item>
+    </string-array>
+    <string-array name="values_pa_pie_gravity" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

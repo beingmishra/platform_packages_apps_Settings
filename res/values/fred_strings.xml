@@ -44,4 +44,8 @@
     <string name="lights_category_title">Light settings</string>
     <string name="notification_light_title">Notification light</string>
     <string name="battery_light_title">Battery light</string>
+
+    <!-- Option defining the phone ringtone for slot1 on Muilti SIM device -->
+    <string name="ringtone1_title">Phone ringtone - SIM 1</string>
+    <string name="ringtone2_title">Phone ringtone - SIM 2</string>
 </resources>

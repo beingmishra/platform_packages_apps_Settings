@@ -25,4 +25,7 @@
 
     <!-- Whether notify user that switch data service -->
     <bool name="confirm_to_switch_data_service">false</bool>
+
+   <!-- Buttons -->
+   <string name="hardware_keys">Hardware buttons</string>
 </resources>

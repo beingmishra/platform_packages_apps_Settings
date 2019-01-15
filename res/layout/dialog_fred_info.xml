@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (C) 2017 The Android Open Source Project
+  Copyright (C) 2018 FredProject
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -23,80 +23,53 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/sim_content_padding">
+        android:padding="24dp">
 
         <TextView
             style="@style/device_info_dialog_label"
-            android:id="@+id/firmware_version_label"
+            android:id="@+id/fred_version_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/firmware_version"/>
+            android:text="@string/fred_version"/>
         <TextView
             style="@style/device_info_dialog_value"
-            android:id="@+id/firmware_version_value"
+            android:id="@+id/fred_version_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <TextView
             style="@style/device_info_dialog_label"
-            android:id="@+id/security_patch_level_label"
+            android:id="@+id/caf_version_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/security_patch"/>
+            android:text="@string/caf_version"/>
         <TextView
             style="@style/device_info_dialog_value"
-            android:id="@+id/security_patch_level_value"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?android:attr/selectableItemBackground"
-            android:textColor="?android:attr/colorAccent"/>
-
-        <TextView
-            style="@style/device_info_dialog_label"
-            android:id="@+id/baseband_version_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/baseband_version"/>
-        <TextView
-            style="@style/device_info_dialog_value"
-            android:id="@+id/baseband_version_value"
+            android:id="@+id/caf_version_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <TextView
             style="@style/device_info_dialog_label"
-            android:id="@+id/kernel_version_label"
+            android:id="@+id/fred_type_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/kernel_version"/>
+            android:text="@string/fred_type"/>
         <TextView
             style="@style/device_info_dialog_value"
-            android:id="@+id/kernel_version_value"
+            android:id="@+id/fred_type_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <TextView
             style="@style/device_info_dialog_label"
-            android:id="@+id/build_number_label"
+            android:id="@+id/fred_maintainer_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/build_number"/>
+            android:text="@string/fred_maintainer"/>
         <TextView
             style="@style/device_info_dialog_value"
-            android:id="@+id/build_number_value"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <!-- SELinux status information -->
-        <TextView
-            style="@style/device_info_dialog_label"
-            android:id="@+id/selinux_status_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/selinux_status"/>
-        <TextView
-            style="@style/device_info_dialog_value"
-            android:id="@+id/selinux_status_value"
+            android:id="@+id/fred_maintainer_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

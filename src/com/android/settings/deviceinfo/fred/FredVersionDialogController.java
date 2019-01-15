@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2019 FredProject
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,31 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.settings.deviceinfo.firmwareversion;
+
+package com.android.settings.deviceinfo.fred;
 
 import android.content.Context;
 import android.os.SystemProperties;
-import android.support.annotation.VisibleForTesting;
+import android.os.UserManager;
 
 import com.android.settings.R;
 
-public class CAFVersionDialogController {
+public class FredVersionDialogController {
 
-    @VisibleForTesting
-    private static final int CAF_VERSION_VALUE_ID = R.id.caf_version;
-    private static final String CAF_VERSION = "caf_version";
-    private static final String CAF_PROP = "ro.caf.version";
+    private static final String FRED_PROPERTY = "ro.fred.vernum";
+    private static final int FRED_VERSION_VALUE_ID = R.id.fred_version_value;
+    private static final int FRED_VERSION_LABEL_ID = R.id.fred_version_label;
 
-    private final FirmwareVersionDialogFragment mDialog;
+    private final FredInfoDialogFragment mDialog;
     private final Context mContext;
+    private final UserManager mUserManager;
 
-    public CAFVersionDialogController(FirmwareVersionDialogFragment dialog) {
+    public FredVersionDialogController(FredInfoDialogFragment dialog) {
         mDialog = dialog;
         mContext = dialog.getContext();
+        mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
     }
 
     public void initialize() {
-         mDialog.setText(CAF_VERSION_VALUE_ID, SystemProperties.get(CAF_PROP,
+
+        mDialog.setText(FRED_VERSION_VALUE_ID, SystemProperties.get(FRED_PROPERTY,
                 mContext.getResources().getString(R.string.device_info_default)));
     }
 }

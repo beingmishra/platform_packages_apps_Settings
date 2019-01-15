@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2019 FredProject
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,31 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.settings.deviceinfo.firmwareversion;
 
-import com.android.settings.R;
+package com.android.settings.deviceinfo.fred;
 
 import android.content.Context;
 import android.os.SystemProperties;
-import android.support.annotation.VisibleForTesting;
+import android.os.UserManager;
 
-public class FredVersionDialogController {
+import com.android.settings.R;
 
-    @VisibleForTesting
-    private static final int FRED_VERSION_VALUE_ID = R.id.fred_version;
-    private static final String FRED_VERSION = "fred_version";
-    private static final String FRED_PROP = "ro.fred.version";
+public class FredMaintainerDialogController {
 
-    private final FirmwareVersionDialogFragment mDialog;
+    private static final String FRED_PROPERTY = "ro.fred.maintainer";
+    private static final int FRED_MAINTAINER_VALUE_ID = R.id.fred_maintainer_value;
+    private static final int FRED_MAINTAINER_LABEL_ID = R.id.fred_maintainer_label;
+
+    private final FredInfoDialogFragment mDialog;
     private final Context mContext;
+    private final UserManager mUserManager;
 
-    public FredVersionDialogController(FirmwareVersionDialogFragment dialog) {
+    public FredMaintainerDialogController(FredInfoDialogFragment dialog) {
         mDialog = dialog;
         mContext = dialog.getContext();
+        mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
     }
 
     public void initialize() {
-         mDialog.setText(FRED_VERSION_VALUE_ID, SystemProperties.get(FRED_PROP,
+
+        mDialog.setText(FRED_MAINTAINER_VALUE_ID, SystemProperties.get(FRED_PROPERTY,
                 mContext.getResources().getString(R.string.device_info_default)));
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 FredProject
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.deviceinfo.firmwareversion;
+package com.android.settings.deviceinfo.fred;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -29,16 +29,16 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
 
-public class FirmwareVersionDialogFragment extends InstrumentedDialogFragment {
+public class FredInfoDialogFragment extends InstrumentedDialogFragment {
 
-    private static final String TAG = "firmwareVersionDialog";
+    private static final String TAG = "FredInfoDialog";
 
     private View mRootView;
 
     public static void show(Fragment host) {
         final FragmentManager manager = host.getChildFragmentManager();
         if (manager.findFragmentByTag(TAG) == null) {
-            final FirmwareVersionDialogFragment dialog = new FirmwareVersionDialogFragment();
+            final FredInfoDialogFragment dialog = new FredInfoDialogFragment();
             dialog.show(manager, TAG);
         }
     }
@@ -51,11 +51,11 @@ public class FirmwareVersionDialogFragment extends InstrumentedDialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity())
-                .setTitle(R.string.firmware_title)
+                .setTitle(R.string.fred_title)
                 .setPositiveButton(android.R.string.ok, null /* listener */);
 
         mRootView = LayoutInflater.from(getActivity()).inflate(
-                R.layout.dialog_firmware_version, null /* parent */);
+                R.layout.dialog_fred_info, null /* parent */);
 
         initializeControllers();
 
@@ -84,11 +84,9 @@ public class FirmwareVersionDialogFragment extends InstrumentedDialogFragment {
     }
 
     private void initializeControllers() {
-        new FirmwareVersionDialogController(this).initialize();
-        new SecurityPatchLevelDialogController(this).initialize();
-        new BasebandVersionDialogController(this).initialize();
-        new KernelVersionDialogController(this).initialize();
-        new BuildNumberDialogController(this).initialize();
-        new SELinuxStatusDialogController(this).initialize();
+        new FredMaintainerDialogController(this).initialize();
+        new FredTypeDialogController(this).initialize();
+        new FredVersionDialogController(this).initialize();
+	new CAFVersionDialogController(this).initialize();
     }
 }

@@ -16,13 +16,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Fred version -->
-    <string name="fred_version">Fred version</string>
-    <string name="fred_version_default">Unknown</string>
-
-    <!-- CAF version -->
+    <!-- FredProject info -->
+    <string name="fred_title">FredProject</string>
+    <string name="fred_info">Fred version</string>
+    <string name="fred_type">Build type</string>
+    <string name="fred_version">Version</string>
+    <string name="fred_maintainer">Maintainer</string>
     <string name="caf_version">CAF version</string>
-    <string name="caf_version_default">Unknown</string>
 
     <!-- SELinux Status -->
     <string name="selinux_status">SELinux status</string>
